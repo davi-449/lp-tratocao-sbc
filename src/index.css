@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.surface.base');
+    color: theme('colors.text.primary');
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #f59e0b33;
+    color: theme('colors.primary.dim');
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+}
+
+@layer utilities {
+  .paw-pattern {
+    opacity: 1;
+  }
+
+  .puffy-glass {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 10px 40px #f59e0b10;
+  }
+}

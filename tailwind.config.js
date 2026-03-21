@@ -1,0 +1,38 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#f59e0b',
+          dim: '#d97706',
+          glow: '#f59e0b66'
+        },
+        whatsapp: '#25d366',
+        surface: {
+          base: '#fffbeb',
+          raw: '#fef3c7',
+          elevated: '#ffffff'
+        },
+        text: {
+          primary: '#1e293b',
+          secondary: '#64748b',
+          muted: '#94a3b8'
+        },
+        accent: {
+          rose: '#fb7185',
+          sky: '#38bdf8'
+        }
+      },
+      fontFamily: {
+        display: ['Outfit', 'sans-serif'],
+        sans: ['Nunito', 'sans-serif']
+      }
+    },
+  },
+  plugins: [],
+}
