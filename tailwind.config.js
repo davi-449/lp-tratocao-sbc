@@ -16,7 +16,8 @@ export default {
         surface: {
           base: '#fffbeb',
           raw: '#fef3c7',
-          elevated: '#ffffff'
+          elevated: '#ffffff',
+          glass: 'rgba(255, 255, 255, 0.8)'
         },
         text: {
           primary: '#1e293b',
@@ -25,7 +26,9 @@ export default {
         },
         accent: {
           rose: '#fb7185',
-          sky: '#38bdf8'
+          sky: '#38bdf8',
+          mint: '#34d399',
+          lavender: '#a78bfa'
         }
       },
       fontFamily: {

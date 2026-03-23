@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+  }
+
   body {
     background-color: theme('colors.surface.base');
     color: theme('colors.text.primary');
@@ -20,10 +25,27 @@
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 transparent;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer utilities {
   .paw-pattern {
+    background-color: theme('colors.surface.base');
+    background-image: radial-gradient(theme('colors.primary.glow') 1px, transparent 1px);
+    background-size: 32px 32px;
     opacity: 1;
   }
 

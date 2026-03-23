@@ -11,7 +11,7 @@ export interface ButtonProps extends Omit<HTMLMotionProps<"button">, "ref"> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
-    const baseStyles = "inline-flex items-center justify-center font-display font-semibold transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none rounded-full";
+    const baseStyles = "inline-flex items-center justify-center font-display font-semibold transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none rounded-full focus:outline-hidden focus-visible:ring-2 ring-primary ring-offset-2";
     
     const variants = {
       primary: "bg-primary text-white hover:bg-primary-dim shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40",

@@ -16,9 +16,9 @@ export const BentoCard = ({ children, className, delay = 0, ...props }: BentoCar
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay, type: "spring", stiffness: 100, damping: 20 }}
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -5, scale: 1.02 }}
       className={cn(
-        "p-8 md:p-10 rounded-[2.5rem] bg-white border border-amber-50 shadow-md shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500",
+        "p-8 md:p-10 rounded-[2.5rem] bg-white border border-amber-50 shadow-md shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-shadow duration-500 focus:outline-hidden focus-visible:ring-2 ring-primary ring-offset-2",
         className
       )}
       {...props}
