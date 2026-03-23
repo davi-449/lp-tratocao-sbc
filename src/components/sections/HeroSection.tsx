@@ -1,17 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/Button";
 import { Heart, Star, MapPin } from "lucide-react";
-import heroBg from "../../assets/hero_bg.png";
 import { AnimatedCounter } from "../ui/AnimatedCounter";
 import { ScrollIndicator } from "../ui/ScrollIndicator";
 
 export const HeroSection = () => {
   return (
     <section id="inicio" tabIndex={-1} className="relative min-h-dvh flex items-center justify-center overflow-hidden pt-20 pb-16 focus:outline-hidden outline-hidden">
-      {/* Background Graphic */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-linear-to-b from-surface-base/80 via-surface-base/90 to-surface-base z-10" />
-        <img src={heroBg} alt="TratoCão Clínica Veterinária" className="w-full h-full object-cover object-center filter opacity-40" />
+      {/* Background Graphic - CSS Clean & Premium */}
+      <div className="absolute inset-0 z-0 bg-amber-50/10 overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-rose-200/30 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] bg-sky-200/30 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-[-20%] left-[20%] w-[60vw] h-[60vw] bg-amber-200/20 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute inset-0 bg-surface-base/40 backdrop-blur-[2px] pointer-events-none" />
+        {/* Soft subtle pattern grid */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '32px 32px' }} />
       </div>
 
       <div className="container relative z-20 px-4 mx-auto max-w-7xl">
